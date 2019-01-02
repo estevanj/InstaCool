@@ -1,18 +1,18 @@
 import * as React from 'react';
 import './App.css';
 import Header from './components/headers';
+import Intro from './components/intro';
 
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <Header></Header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Header/>
+       <Intro text ="Hola mundo"/>
+       <Intro/>
       </div>
-    );
+    )
   }
 }
 
