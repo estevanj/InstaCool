@@ -1,8 +1,11 @@
 import * as React from 'react'
 
+import Foother from '../components/Footer';
+
 const style ={
     backgroundColor: '#fff',
     border: '1px solid #ddd',
+    marginBottom: '10px',
     padding: '10px 15px',
 }
 
@@ -16,10 +19,7 @@ export default class Post extends React.Component<IpostProps>{
         return(
             <div style = { style }>
             <img src={image} />
-            <div style= {{display:'flex', backgroundColor:'#eee', marginLeft:'-15px', marginBottom:'-10px', width:'calc(100% + 30px)'}}>
-                <div style = {{flex:1, textAlign:'center'}}>Like</div>
-                <div style = {{flex:1, textAlign:'center'}}>Shared</div>
-            </div>
+            <Foother/>
             </div>
         )
     }

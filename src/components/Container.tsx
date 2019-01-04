@@ -1,9 +1,10 @@
 import * as React from 'react'
 
-const style = (center: boolean) => ({
+const style = (center: boolean): React.CSSProperties => ({
     alignItems: center? 'center': undefined,
     backgroundColor: '#eee',
     display: 'flex',
+    flexDirection: 'column',
     height : 'calc(100vh - 20px)',
     justifyContent: center? 'center': undefined,
     padding: '10px 15px',
