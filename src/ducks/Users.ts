@@ -12,5 +12,10 @@ export default function reducer(state = {}) {
 
 export const login = ({email, password}: Ilogin) =>
     async (dispatch: Dispatch, getState: () => any, { auth }: IServices) => {
-        const result = await auth.signInWithEmailAndPassword(email, password)
+         await auth.signInWithEmailAndPassword(email, password)
     }
+
+export const register = ({email, password}: Ilogin)=>   
+ async (dispatch: Dispatch, getState: () => any, { auth }: IServices) => {
+    await auth.createUserWithEmailAndPassword(email, password)
+}
