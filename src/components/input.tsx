@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { WrappedFieldProps } from "redux-form";
+
 
 export const style = {
     input: {
@@ -18,15 +18,10 @@ export const style = {
     } as React.CSSProperties
 }
 
-interface IInputProps {
-    placeholder?: string
-    label: string
-
-}
 
 // Componente puro. Componente sin estado. Más facil de escribir y testear,
 // Pero no accede al ciclo de vida de los componentes de React
-const Input: React.StatelessComponent<WrappedFieldProps & IInputProps> = props => {
+const Input: any = (props:any) => {
     const { input, label } = props
     return (
         <div>

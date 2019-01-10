@@ -2,12 +2,12 @@ import * as React from 'react'
 
 import Card from '../../components/Card';
 import Container from '../../components/Container'
-import Title from '../../components/Title';
 import RegisterForm from '../../components/RegisterForm'
+import Title from '../../components/Title';
 
 import { connect } from 'react-redux';
-import { Ilogin, register as registerThunk } from '../../ducks/Users';
 import { ThunkDispatch } from 'redux-thunk';
+import { Ilogin, register as registerThunk } from '../../ducks/Users';
 
 interface IRegisterProps{
     register: (a: Ilogin) => void

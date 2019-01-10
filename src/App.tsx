@@ -34,6 +34,12 @@ class App extends React.Component<IAppProps> {
           const { history } = this.props
           history.push('/');
         }
+
+        this.setState({
+          loading: false
+        })
+
+
     })
   }
 
