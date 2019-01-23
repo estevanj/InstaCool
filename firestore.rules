@@ -3,5 +3,8 @@ service cloud.firestore {
     match /users{user} {
       allow write: if request.resource.data.role == 'user';
     }
+    match /posts/{post} {
+      allow list: if request.auth.uid != null;
+    }
   }
 }
