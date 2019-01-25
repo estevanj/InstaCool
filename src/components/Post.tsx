@@ -1,6 +1,8 @@
 import * as React from 'react'
 
 import Foother from '../components/Footer';
+import { IServices } from 'src/services';
+import { Dispatch } from 'redux';
 
 const style ={
     backgroundColor: '#fff',
@@ -12,16 +14,26 @@ const style ={
 
 interface IpostProps {
     image : string
+    like: () => void
+    share: () => void
 }
 
 export default class Post extends React.Component<IpostProps>{
     public render (){
-         const { image } = this.props
+         const { image, like,share } = this.props
         return(
             <div style = { style }>
             <img style={{width: '300px'}} src={image} />
-            <Foother/>
+            <Foother like={like} shared ={share}/>
             </div>
         )
     }
+}
+
+export const like = (id: string) =>
+async(dispatch: Dispatch, getState:() => any, {}: IServices) =>{
+}
+
+export const Share = (id: string) =>
+async(dispatch: Dispatch, getState:() => any, {}: IServices) =>{
 }

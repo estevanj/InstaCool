@@ -19,12 +19,13 @@ const styles ={
     }
 } 
 
-export default class Foother extends React.Component {
+export default class Foother extends React.Component<any> {
     public render (){
+        const {like, share} = this.props
         return (
             <div style= {styles.footer as React.CSSProperties}>
-                <div style = {styles.button as React.CSSProperties}><FontAwesomeIcon icon = {faThumbsUp}/>Like</div>
-                <div style = {styles.button as React.CSSProperties}><FontAwesomeIcon icon={faRetweet}/>Shared</div>
+                <div  onClick={like} style = {styles.button as React.CSSProperties}><FontAwesomeIcon icon = {faThumbsUp}/>Like</div>
+                <div onClick={share} style = {styles.button as React.CSSProperties}><FontAwesomeIcon icon={faRetweet}/>Shared</div>
             </div>
         )
     }
