@@ -30,10 +30,3 @@ export default class Post extends React.Component<IpostProps>{
     }
 }
 
-export const like = (id: string) =>
-async(dispatch: Dispatch, getState:() => any, {}: IServices) =>{
-}
-
-export const Share = (id: string) =>
-async(dispatch: Dispatch, getState:() => any, {}: IServices) =>{
-}
